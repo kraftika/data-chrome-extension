@@ -1,1 +1,1 @@
-# garage-week-2015
+# Chrome extension - display elements with data attributes
