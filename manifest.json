@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "DPS - Show me data-test-id attribute",
+  "description": "Show me data-test-id",
+  "version": "1.0",
+  "page_action": {
+    "default_icon": "icons/tid-blue.png"
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "permissions": [
+    "tabs",
+    "https://*.digitalpublishing.adobe.com/"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["css/base.css"],
+      "js": ["lib/jquery-1.11.3.min.js", "src/content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
